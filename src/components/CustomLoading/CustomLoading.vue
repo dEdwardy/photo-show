@@ -1,8 +1,8 @@
 <template>
-  <div class="CustomLoading">
+  <div class="CustomLoading" :class="pr">
       <div class="progressNum">{{ progressNum }}%</div>
-      <div v-if="progressNum===100" class="loadingContainer">
-          <div class="loaded"></div>
+      <div class="loadingContainer">
+          <div class="loaded" :style="{ width:progressNum+'%' }"></div>
           <div class="unloaded"></div>
       </div>
   </div>
@@ -18,25 +18,29 @@ export default {
         }
     },
     methods:{
-        
+        changeProgress(value){ 
+           this.progressNum =value;
+        }
     }
 }
 </script>
 
 <style lang="less" scoped>
 .CustomLoading{
-    width: 100px;
-    height: 4px;
-    border-radius: 2px;
+    width: 90%;
+    margin:0 auto;
+    text-align: center;
     .progressNum{
         text-align: center;
     }
     .loadingContainer{
-        width: 100%;
-        height: 4px;
         display: flex;
+        overflow: hidden;
+        width: 100%;
+        height: 6px;
+        border-radius: 2px;
         .loaded{
-            width: 0;
+            width:0;
             background-color:rgb(76, 164, 214);
         }
         .unloaded{

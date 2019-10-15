@@ -19,8 +19,10 @@ const router = new Router({
         },{
             path: '/surprise',
             component: () => import('../views/Surprise/Surprise') 
-        },
-        {
+        },{
+            path: '/customLoading',
+            component: () => import('@/components/CustomLoading/CustomLoading')
+        },{
             path: '/*',
             component: () => import('../views/Index') 
         }

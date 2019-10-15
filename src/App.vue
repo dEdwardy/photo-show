@@ -22,4 +22,15 @@ export default {
   margin:0;
   padding: 0;
 }
+.clearfix:before, .clearfix:after {
+    content:"";
+    display:table; 
+}
+.clearfix:after{
+    clear:both;
+    overflow:hidden;
+}
+.clearfix{
+    zoom:1;
+}
 </style>

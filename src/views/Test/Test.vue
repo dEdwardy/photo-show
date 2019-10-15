@@ -1,18 +1,18 @@
 <template>
   <div>
       <FileUpload/>    
-      <CustomLoading/>
+      <CustomLoading2/>
   </div>
 </template>
 
 <script>
 import FileUpload  from '@/components/FileUpload/FileUpload';
-import CustomLoading from '@/components/CustomLoading/CustomLoading';
+import CustomLoading2 from '@/components/CustomLoading2/CustomLoading2';
 export default {
     name:'Test',
     components:{
         FileUpload,
-        CustomLoading
+        CustomLoading2
     }
 }
 </script>
